@@ -1,0 +1,13 @@
+.nav-bar > li {
+    list-style-type: circle;
+    font-size: 1.7em;
+}
+
+.center {
+    text-align: center;
+    margin-top: 1em;
+}
+
+.square-list {
+    list-style-type: square;
+}

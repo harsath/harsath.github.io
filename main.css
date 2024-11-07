@@ -51,7 +51,7 @@ ul ul li {
     background-color: #575656;
 }
 
-/* @media (max-width: 600px) {
+@media (max-width: 600px) {
     .header {
         font-size: 2rem;
     }
@@ -63,4 +63,4 @@ ul ul li {
     .subheading + * {
         font-size: 1rem;
     }
-} */
+}

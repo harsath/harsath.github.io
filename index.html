@@ -67,6 +67,15 @@
       max-height: 0;
     }
 
+    p .line {
+      display: inline;
+      max-height: none;
+      overflow: visible;
+      padding-left: 0;
+      animation: appear-inline 0.01s var(--delay) both,
+                 iridescent-shift 7s linear var(--delay) infinite;
+    }
+
     .line.accent {
       padding-left: 36px;
     }
@@ -98,6 +107,11 @@
 
     @keyframes appear {
       to { max-height: 10em; }
+    }
+
+    @keyframes appear-inline {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
 
     @keyframes iridescent-shift {
@@ -141,8 +155,7 @@
 
     <div class="section">
       <span class="type" style="--n:8;--time:0s">$ whoami</span>
-      <p class="line accent" style="--delay:0.25s">hi, i'm harsath. i love programming and computer science. i have a passion for thinking about problems from first principles.</p>
-      <p class="line accent" style="--delay:0.35s">i mostly work with backend and machine learning systems, but i have explored roughly every layer of the software stack through personal projects. some of them can be found at <a href="https://github.com/harsath" style="color:inherit;text-decoration:underline">my github</a>.</p>
+      <p class="line accent" style="--delay:0.3s">hi, i'm harsath. i love programming and computer science. i have a passion for thinking about problems from first principles. i mostly work with backend and machine learning systems, but i have explored roughly every layer of the software stack through personal projects. some of them can be found at <a href="https://github.com/harsath" style="color:inherit;text-decoration:underline">my github</a>.</p>
     </div>
 
     <div class="section">

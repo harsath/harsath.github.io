@@ -1,214 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>harsath</title>
-  <script>document.documentElement.classList.add('js')</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Harsath</title>
+  <link rel="icon" href="favicon/favicon.ico">
   <style>
-    :root {
-      --fg: #e6e6e6;
-      --green: #4ee44e;
-      --cyan: #2fd0d8;
-      --grey: #8c8c8c;
+    @font-face {
+      font-family: "PT Serif";
+      src: url(fonts/PTSerif-400.woff2) format("woff2");
+      font-display: swap;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+    @font-face {
+      font-family: "PT Sans";
+      src: url(fonts/PTSans-400.woff2) format("woff2");
+      font-display: swap;
     }
 
     body {
-      background: #000;
-      color: var(--fg);
-      font: clamp(13px, 2.2vw, 16px)/1.5 ui-monospace, Menlo, "DejaVu Sans Mono", Consolas, monospace;
-      padding: 2em clamp(1em, 4vw, 3em);
-    }
-
-    main {
-      max-width: 80ch;
+      max-width: 38rem;
       margin: 0 auto;
+      padding: 2rem 1rem;
+      font: 1rem/1.5 "PT Serif", Georgia, serif;
+      color: #515151;
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
+    @media (min-width: 38em) {
+      html { font-size: 20px; }
     }
 
-    a:hover {
-      text-decoration: underline;
+    h1, h2 {
+      font-family: "PT Sans", Helvetica, Arial, sans-serif;
+      font-weight: 400;
+      color: #313131;
+      margin-bottom: .5rem;
     }
 
-    pre {
-      font: inherit;
-    }
-
-    .out a {
-      display: block;
-    }
-
-    .out p a {
-      display: inline;
-    }
-
-    .ps1,
-    .cmd i {
-      color: var(--green);
-      font-style: normal;
-    }
-
-    .dir {
-      color: var(--cyan);
-      font-weight: bold;
-    }
-
-    .dim {
-      color: var(--grey);
-    }
-
-    .ga {
-      height: 1em;
-      vertical-align: -.1em;
-    }
-
-    section + section {
-      margin-top: 1.5em;
-    }
-
-    .entry + .entry {
-      margin-top: 1.5em;
-    }
-
-    .cursor {
-      display: inline-block;
-      width: .6em;
-      height: 1.1em;
-      background: var(--fg);
-      vertical-align: text-bottom;
-      animation: blink 1s steps(1) infinite;
-    }
-
-    /* JS reveals sections one by one; without JS everything shows at once */
-    .js section:not(.on),
-    .js section:not(.done) .out {
-      display: none;
-    }
-
-    @keyframes blink {
-      50% { background: transparent; }
-    }
+    h1 { font-size: 1.5rem; margin: 0; }
+    h2 { font-size: 1.25rem; margin-top: 2rem; }
+    header p { margin: 0 0 1rem; color: #999; }
+    ul { padding-left: 1.25rem; margin: 0; }
+    a { color: #268bd2; text-decoration: none; }
+    a:hover { text-decoration: underline; }
   </style>
 </head>
-
 <body>
-  <main>
+  <header>
+    <h1>Harsath</h1>
+    <p>Software engineer in the pharmaceutical industry, working on AI/ML, backend systems, and data engineering.</p>
+  </header>
 
-    <section>
-      <p class="cmd">$ <span class="t"><i>ssh</i> -q -l admin harsath.com</span></p>
-    </section>
+  <ul>
+    <li>My personal projects are on GitHub: <a href="https://github.com/harsath">github.com/harsath</a></li>
+    <li>Connect with me on LinkedIn: <a href="https://www.linkedin.com/in/harsath/">linkedin.com/in/harsath</a></li>
+    <li>See what I&rsquo;m reading on Goodreads: <a href="https://www.goodreads.com/harsath">goodreads.com/harsath</a></li>
+    <li>My Wikipedia contributions are listed on my user page: <a href="https://en.wikipedia.org/wiki/User:WikiLinuz">wikipedia.org/wiki/User:WikiLinuz</a></li>
+  </ul>
 
-    <section>
-      <p class="cmd"><span class="ps1">admin@harsath.com:~</span>$ <span class="t"><i>whoami</i></span></p>
-      <div class="out">
-        <pre>                            _   _
-  /\  /\__ _ _ __ ___  __ _| |_| |__
- / /_/ / _` | '__/ __|/ _` | __| '_ \
-/ __  / (_| | |  \__ \ (_| | |_| | | |
-\/ /_/ \__,_|_|  |___/\__,_|\__|_| |_|</pre>
-      </div>
-    </section>
+  <h2>Contact</h2>
+  <ul>
+    <li>email: harsath@fastmail.com (<a href="pgp.txt">pgp</a>)</li>
+    <li>discord: xethoxy</li>
+    <li>irc: xrandom on <a href="https://libera.chat/guides/connect">libera.chat</a></li>
+  </ul>
 
-    <section>
-      <p class="cmd"><span class="ps1">admin@harsath.com:~</span>$ <span class="t"><i>ls</i> -1F</span></p>
-      <div class="out">
-        <a href="#contact">contact.txt</a>
-        <a href="#links">links.txt</a>
-        <a class="dir" href="#projects">projects/</a>
-        <a class="dir" href="#wiki">wikipedia_contributions/</a>
-      </div>
-    </section>
-
-    <section id="contact">
-      <p class="cmd"><span class="ps1">admin@harsath.com:~</span>$ <span class="t"><i>cat</i> contact.txt</span></p>
-      <div class="out">
-        <p>email: harsath@fastmail.com (<a href="./pgp.txt" target="_blank">./pgp.txt</a>)</p>
-        <p>discord: xethoxy</p>
-        <p>irc: xrandom (<a href="https://libera.chat/guides/connect" target="_blank">irc.libera.chat</a>)</p>
-      </div>
-    </section>
-
-    <section id="links">
-      <p class="cmd"><span class="ps1">admin@harsath.com:~</span>$ <span class="t"><i>cat</i> links.txt</span></p>
-      <div class="out">
-        <a target="_blank" href="https://github.com/harsath">github.com/harsath</a>
-        <a target="_blank" href="https://www.linkedin.com/in/harsath/">linkedin.com/in/harsath</a>
-        <a target="_blank" href="https://en.wikipedia.org/wiki/User:WikiLinuz">wikipedia.org/wiki/User:WikiLinuz</a>
-        <a target="_blank" href="https://www.goodreads.com/harsath">goodreads.com/harsath</a>
-      </div>
-    </section>
-
-    <!-- each entry = `head -2` of the README: "# name" line + one-line description -->
-    <section id="projects">
-      <p class="cmd"><span class="ps1">admin@harsath.com:~</span>$ <span class="t"><i>for</i> p in projects/*; do head -2 $p/README.md; done</span></p>
-      <div class="out">
-        <div class="entry">
-          <a target="_blank" href="https://airdrop.harsath.com"># airdrop.harsath.com</a>
-          <p>e2ee p2p file sharing using WebRTC. uses public torrent trackers and STUN/TURN relays for peer-discovery and data transfer.</p>
-        </div>
-        <div class="entry">
-          <a target="_blank" href="https://github.com/harsath/wikiscroll.xyz"># wikiscroll.xyz</a>
-          <p>TikTok-style doomscrolling app for exploring Wikipedia articles with topic-based feeds.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- each file starts with a "# comment" header -->
-    <section id="wiki">
-      <p class="cmd"><span class="ps1">admin@harsath.com:~</span>$ <span class="t"><i>cat</i> wikipedia_contributions/{ga,edits,created}.txt</span></p>
-      <div class="out">
-        <div class="entry">
-          <p class="dim"># taken to Good Article (GA) status</p>
-          <a target="_blank" href="https://en.wikipedia.org/wiki/Binary_search_tree">Binary search tree <img class="ga" src="./img/ga.png" alt="GA" title="Good Article"></a>
-          <a target="_blank" href="https://en.wikipedia.org/wiki/Bulletproof_hosting">Bulletproof hosting <img class="ga" src="./img/ga.png" alt="GA" title="Good Article"></a>
-          <a target="_blank" href="https://en.wikipedia.org/wiki/Fast_flux">Fast flux <img class="ga" src="./img/ga.png" alt="GA" title="Good Article"></a>
-          <a target="_blank" href="https://en.wikipedia.org/wiki/Trie">Trie <img class="ga" src="./img/ga.png" alt="GA" title="Good Article"></a>
-        </div>
-        <div class="entry">
-          <p class="dim"># significant contributions (~500-600 edits each)</p>
-          <a target="_blank" href="https://en.wikipedia.org/wiki/Hash_table">Hash table</a>
-          <a target="_blank" href="https://en.wikipedia.org/wiki/Cuckoo_hashing">Cuckoo hashing</a>
-          <a target="_blank" href="https://en.wikipedia.org/wiki/Consistent_hashing">Consistent hashing</a>
-        </div>
-        <div class="entry">
-          <p class="dim"># created</p>
-          <a target="_blank" href="https://en.wikipedia.org/wiki/Nick_Mathewson">Nick Mathewson</a>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <p class="cmd"><span class="ps1">admin@harsath.com:~</span>$ <span class="cursor"></span></p>
-    </section>
-
-  </main>
-
-  <script>
-    const sleep = ms => new Promise(r => setTimeout(r, ms));
-    (async () => {
-      for (const s of document.querySelectorAll('section')) {
-        const t = s.querySelector('.t'), nodes = [];
-        if (t) for (const w = document.createTreeWalker(t, NodeFilter.SHOW_TEXT); w.nextNode();) nodes.push([w.currentNode, w.currentNode.data]);
-        nodes.forEach(([n]) => n.data = '');
-        s.classList.add('on');
-        await sleep(300);
-        for (const [n, text] of nodes) for (const ch of text) { n.data += ch; await sleep(20); }
-        await sleep(100);
-        s.classList.add('done');
-      }
-    })();
-  </script>
+  <h2>Fun projects</h2>
+  <ul>
+    <li><a href="https://airdrop.harsath.com">airdrop.harsath.com</a>: End-to-end encrypted, peer-to-peer file sharing over WebRTC. Uses public BitTorrent trackers to find peers and STUN/TURN servers to connect them.</li>
+    <li><a href="https://github.com/harsath/wikiscroll.xyz">wikiscroll.xyz</a>: A TikTok-style feed for doomscrolling Wikipedia articles, organized by topic.</li>
+  </ul>
 </body>
-
 </html>

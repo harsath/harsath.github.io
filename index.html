@@ -19,6 +19,20 @@
       font-display: swap;
     }
 
+    @font-face {
+      font-family: "PT Serif";
+      src: url(fonts/PTSerif-700.woff2) format("woff2");
+      font-weight: 700;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: "PT Sans";
+      src: url(fonts/PTSans-700.woff2) format("woff2");
+      font-weight: 700;
+      font-display: swap;
+    }
+
     body {
       max-width: 38rem;
       margin: 0 auto;
@@ -47,28 +61,31 @@
     ul { padding-left: 1.25rem; margin: 0; }
     a { color: #268bd2; text-decoration: none; }
     a:hover { text-decoration: underline; }
+    li pre { display: inline; margin: 0; }
+    h1 + h2 { margin-top: 1rem; }
   </style>
 </head>
 <body>
   <h1>Harsath <small class="aka"><i>aka</i> <b>xethoxy</b> <i>aka</i> <b>xe</b></small></h1>
+  <h2>Links</h2>
   <ul>
-    <li><a href="https://github.com/harsath">github.com/harsath</a></li>
+    <li>recreational programming: <a href="https://github.com/harsath">github.com/harsath</a></li>
+    <li>readings: <a href="https://www.goodreads.com/harsath">goodreads.com/harsath</a></li>
+    <li>wikipedia contributions: <a href="https://en.wikipedia.org/wiki/User:WikiLinuz#Articles">wikipedia.org/wiki/User:WikiLinuz</a></li>
     <li><a href="https://www.linkedin.com/in/harsath/">linkedin.com/in/harsath</a></li>
-    <li>poorly written book reviews: <a href="https://www.goodreads.com/harsath">goodreads.com/harsath</a></li>
-    <li>wikipedia articles I helped write: <a href="https://en.wikipedia.org/wiki/User:WikiLinuz#Articles">wikipedia.org/wiki/User:WikiLinuz</a></li>
   </ul>
 
-  <h2>Contact</h2>
+  <h2>Contacts</h2>
   <ul>
-    <li><b>harsath@fastmail.com</b> (<a href="pgp.txt">pgp</a>)</li>
-    <li>discord: <b>xethoxy</b></li>
-    <li>irc: <b>xrandom</b> on <a href="https://libera.chat/guides/connect">libera.chat</a></li>
+    <li><b>harsath@fastmail.com</b> (<a href="pgp.txt">pgp key</a>)</li>
+    <li>Discord: <b>xethoxy</b></li>
+    <li>irc: <b>xrandom</b> on <pre>irc.libera.chat</pre> <pre>#linux</pre></li>
   </ul>
 
   <h2>Some fun live projects</h2>
   <ul>
-    <li><a href="https://airdrop.harsath.com">airdrop.harsath.com</a>: encrypted p2p file sharing over WebRTC through public torrent trackers and STUN/TURN relays.</li>
-    <li>(RIP) <a href="https://github.com/harsath/wikiscroll.xyz">wikiscroll.xyz</a>: tiktok-style feed for doomscrolling wikipedia, organized by topic.</li>
+    <li><a href="https://airdrop.harsath.com">airdrop.harsath.com</a> (P2P file transfer)</li>
+    <li>(RIP) <a href="https://github.com/harsath/wikiscroll.xyz">wikiscroll.xyz</a> (tiktok-style feed for doomscrolling wikipedia)</li>
   </ul>
 </body>
 </html>
